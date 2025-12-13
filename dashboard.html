@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Daily Habit Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h1>Habit Tracker</h1>
+            </div>
+            <div class="header-right">
+                <button id="reportBtn" class="btn-success">
+                    📄 Generate Report
+                </button>
+                <button id="themeToggle" class="icon-btn">
+                    🌙
+                </button>
+                <div class="user-menu">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn-text">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <p class="stat-label">Today's Progress</p>
+                    <p class="stat-value" id="progressPercent">0%</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <p class="stat-label">Completed</p>
+                    <p class="stat-value" id="completedCount">0/0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                    <p class="stat-label">Total Streak</p>
+                    <p class="stat-value" id="totalStreak">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-content">
+                    <p class="stat-label">Active Habits</p>
+                    <p class="stat-value" id="activeHabits">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habits Section -->
+        <section class="habits-section">
+            <div class="section-header">
+                <h2>Today's Habits</h2>
+                <button id="addHabitBtn" class="btn-primary">+ Add Habit</button>
+            </div>
+
+            <!-- Add Habit Form (hidden by default) -->
+            <div id="addHabitForm" class="add-habit-form hidden">
+                <input type="text" id="newHabitName" placeholder="Enter habit name..." maxlength="50">
+                <button id="saveHabitBtn" class="btn-success">Add</button>
+                <button id="cancelHabitBtn" class="btn-secondary">Cancel</button>
+            </div>
+
+            <!-- Habits List -->
+            <div id="habitsList" class="habits-list">
+                <!-- Habits will be loaded here dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📅</div>
+                <p>No habits yet. Click "Add Habit" to get started!</p>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <h2>Analytics</h2>
+            <div class="chart-container">
+                <canvas id="weeklyChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="js/firebase.js"></script>
+    <script src="js/habits.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
