@@ -10,7 +10,7 @@ This is a fantastic project\! Based on the files you provided, here is a compreh
 
 This project is specifically built to track habits and be consistent. By focusing on your daily streaks, StreakForge helps you build momentum and achieve your long-term goals.
 
-### ✨ Key Features
+###  Key Features
 
   * **Robust Streak Tracking:** Automatically calculates and displays your current consecutive streak for every habit.
   * **Firebase Authentication:** Secure and easy user registration and login using Firebase Auth.
