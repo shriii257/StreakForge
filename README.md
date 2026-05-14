@@ -5,7 +5,7 @@
 
 
 
-**StreakForge** is a modern, single-page web application designed to help users establish and maintain long-lasting habits. Built with plain HTML, CSS, and JavaScript, it uses **Firebase** for fast, reliable backend services, focusing on consistency, visualization, and momentum.
+StreakForge is a modern, single-page web application designed to help users establish and maintain long-lasting habits. Built with plain HTML, CSS, and JavaScript, it uses **Firebase** for fast, reliable backend services, focusing on consistency, visualization, and momentum....
 
 This project is specifically built to track habits and be consistent. By focusing on your daily streaks, StreakForge helps you build momentum and achieve your long-term goals.
 
